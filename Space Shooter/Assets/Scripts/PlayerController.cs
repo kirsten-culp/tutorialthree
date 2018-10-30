@@ -36,7 +36,9 @@ public class PlayerController : MonoBehaviour
             Instantiate(shot, shotSpawn.position, shotSpawn.rotation); //as GameObject;
             audioSource.Play();
         }
-      }
+        if (Input.GetKey("escape"))
+             Application.Quit();
+    }
     void FixedUpdate()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
